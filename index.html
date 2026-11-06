@@ -148,6 +148,155 @@ footer{padding:26px 0;text-align:center;color:var(--muted);font-size:14px}
 <section id="apropos"><div class="wrap">
   <h2>À propos</h2>
   <p class="sub">Comprendre un besoin, concevoir une solution, la tester et la livrer.</p>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rokhaya Fall — Portfolio</title>
+<meta name="description" content="Portfolio de Rokhaya Fall, étudiante en Master MIAGE : développement, DevOps, systèmes d'information, data et gestion de projet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff; --bg-soft:#f4f7fb; --ink:#14213d; --text:#2b3445; --muted:#5d6b82;
+  --line:#e2e8f0; --accent:#163d7a; --accent-2:#0f9b8e; --chip:#eaf1fb; --chip-ink:#163d7a;
+  --ok:#0f9b8e; --wip:#b7791f; --wip-bg:#fdf3e1;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:"JetBrains Mono",monospace;font-weight:500;color:var(--ink);font-size:15px}
+.logo span{color:var(--accent-2)}
+.links{display:flex;gap:22px}
+.links a{color:var(--muted);font-size:14.5px;font-weight:500}
+.links a:hover{color:var(--accent);text-decoration:none}
+/* hero */
+header.hero{padding:84px 0 64px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#fff 0%,var(--bg-soft) 100%)}
+.tag{font-family:"JetBrains Mono",monospace;color:var(--accent-2);font-size:14px;margin-bottom:14px}
+h1{font-size:46px;line-height:1.1;color:var(--ink);margin:0 0 14px;letter-spacing:-.5px}
+.lead{font-size:20px;color:var(--muted);max-width:720px;margin:0 0 26px}
+.lead strong{color:var(--ink);font-weight:600}
+.search{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px}
+.search span{background:#fff;border:1px solid var(--line);border-left:3px solid var(--accent-2);padding:8px 14px;border-radius:8px;font-size:15px;color:var(--ink)}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:8px;font-weight:600;font-size:15px;border:1.5px solid var(--accent)}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.primary:hover{background:#0f2f61;text-decoration:none}
+.btn.ghost{color:var(--accent);background:#fff}
+.btn.ghost:hover{background:var(--chip);text-decoration:none}
+/* sections */
+section{padding:64px 0;border-bottom:1px solid var(--line)}
+section:nth-of-type(even){background:var(--bg-soft)}
+h2{font-size:28px;color:var(--ink);margin:0 0 8px;letter-spacing:-.3px}
+.sub{color:var(--muted);margin:0 0 32px}
+/* about */
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:start}
+.about p{margin:0 0 14px}
+.facts{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.facts div{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.facts div:last-child{border-bottom:0}
+.facts b{color:var(--ink);font-weight:600}
+.facts span{color:var(--muted);text-align:right}
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px}
+.card h3{margin:0 0 12px;font-size:16px;color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{background:var(--chip);color:var(--chip-ink);font-size:13.5px;padding:4px 10px;border-radius:6px;font-weight:500}
+/* experience */
+.xp{display:grid;grid-template-columns:200px 1fr;gap:28px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px}
+.xp .when{color:var(--muted);font-size:14.5px}
+.xp .when b{display:block;color:var(--ink);font-size:15px;margin-bottom:4px}
+.xp h3{margin:0 0 4px;font-size:19px;color:var(--ink)}
+.xp .org{color:var(--accent);font-weight:600;margin-bottom:12px}
+.xp ul{margin:0 0 14px;padding-left:20px}
+.xp li{margin-bottom:5px}
+.xp + .xp{margin-top:16px}
+/* projects */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.filters button{font:inherit;font-size:14px;font-weight:500;padding:7px 15px;border-radius:20px;border:1px solid var(--line);background:#fff;color:var(--muted);cursor:pointer}
+.filters button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.proj{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px;display:flex;flex-direction:column;transition:border-color .15s, box-shadow .15s}
+.proj:hover{border-color:#c4d3ea;box-shadow:0 6px 20px rgba(20,33,61,.06)}
+.proj .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;gap:8px}
+.cat{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--accent-2);text-transform:uppercase;letter-spacing:.5px}
+.status{font-size:12px;font-weight:600;padding:3px 9px;border-radius:12px;white-space:nowrap}
+.status.done{background:#e3f6f3;color:var(--ok)}
+.status.wip{background:var(--wip-bg);color:var(--wip)}
+.proj h3{margin:0 0 4px;font-size:17px;color:var(--ink);line-height:1.35}
+.proj .ctx{font-size:13.5px;color:var(--muted);margin-bottom:10px}
+.proj p{font-size:14.5px;margin:0 0 14px;flex:1}
+.proj .chips{margin-top:auto}
+.proj .chip{font-size:12.5px;padding:3px 8px}
+.hide{display:none}
+/* education */
+.timeline{display:grid;gap:14px}
+.edu{display:grid;grid-template-columns:150px 1fr;gap:20px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 24px}
+.edu .y{color:var(--accent);font-weight:600;font-size:15px}
+.edu h3{margin:0 0 2px;font-size:17px;color:var(--ink)}
+.edu span{color:var(--muted);font-size:15px}
+.certs{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:34px}
+.cert{display:flex;justify-content:space-between;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 18px}
+.cert b{color:var(--ink);font-weight:600;font-size:15px;display:block}
+.cert span{color:var(--muted);font-size:14px}
+.cert em{font-style:normal;color:var(--muted);font-size:14px;white-space:nowrap}
+/* contact */
+.contact{text-align:center}
+.contact p{max-width:560px;margin:0 auto 26px;color:var(--muted)}
+.contact .cta{justify-content:center}
+footer{padding:26px 0;text-align:center;color:var(--muted);font-size:14px}
+/* responsive */
+@media (max-width:900px){
+  .grid,.skills{grid-template-columns:1fr 1fr}
+  .about{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  .links{display:none}
+  header.hero{padding:56px 0 44px}
+  h1{font-size:34px}
+  .lead{font-size:18px}
+  section{padding:48px 0}
+  .grid,.skills,.certs{grid-template-columns:1fr}
+  .xp,.edu{grid-template-columns:1fr;gap:8px}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="logo">rokhaya<span>.fall</span></div>
+  <div class="links">
+    <a href="#apropos">À propos</a><a href="#competences">Compétences</a><a href="#experience">Expérience</a><a href="#projets">Projets</a><a href="#formation">Formation</a><a href="#contact">Contact</a>
+  </div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="tag">&lt;/&gt; Master MIAGE · Université de Haute-Alsace</div>
+  <h1>Rokhaya Fall</h1>
+  <p class="lead">Étudiante en Master MIAGE, entre <strong>développement</strong>, <strong>DevOps</strong>, <strong>systèmes d'information</strong>, <strong>data</strong> et <strong>gestion de projet</strong>.</p>
+  <div class="search">
+    <span>🔎 Stage dès mai 2027 · 1 à 4 mois</span>
+    <span>🔎 Alternance dès sept. 2027 · 2 sem / 2 sem</span>
+  </div>
+  <div class="cta">
+    <a class="btn primary" href="#projets">Voir mes projets</a>
+    <a class="btn ghost" href="https://www.linkedin.com/in/rokhaya-fall-5156b2252" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn ghost" href="mailto:falldaba56@gmail.com">Me contacter</a>
+  </div>
+</div></header>
+
+<section id="apropos"><div class="wrap">
+  <h2>À propos</h2>
+  <p class="sub">Comprendre un besoin, concevoir une solution, la tester et la livrer.</p>
   <div class="about">
     <div>
       <p>Formée en ingénierie informatique à Dakar puis en MIAGE à Mulhouse, j'aime le point de rencontre entre la technique et le métier.</p>
@@ -223,10 +372,10 @@ footer{padding:26px 0;text-align:center;color:var(--muted);font-size:14px}
   <div class="grid" id="grid">
 
     <article class="proj" data-c="dev si">
-      <div class="top"><span class="cat">C++ · Équipe de 4</span><span class="status done">Terminé</span></div>
+      <div class="top"><span class="cat">C++ · Graphes</span><span class="status done">Terminé</span></div>
       <h3>Simulation et optimisation d'un réseau V2V</h3>
       <div class="ctx">Master MIAGE · UE Réseaux mobiles</div>
-      <p>Outil de simulation de communications véhicule à véhicule sur une carte réelle (OpenStreetMap) : graphe routier, au moins 2 000 véhicules simultanés, graphe d'interférences dynamique et coloration de graphe. Mon rôle : architecture, données et graphes (algorithmes glouton et DSATUR).</p>
+      <p>Outil de simulation de communications véhicule à véhicule sur une carte réelle (OpenStreetMap) : graphe routier, au moins 2 000 véhicules simultanés, graphe d'interférences dynamique et coloration de graphe pour attribuer les fréquences, avec comparaison d'algorithmes (glouton, DSATUR).</p>
       <div class="chips"><span class="chip">C++17</span><span class="chip">Qt 6</span><span class="chip">CMake</span><span class="chip">Théorie des graphes</span><span class="chip">Scrum</span><span class="chip">GitHub</span></div>
     </article>
 
@@ -255,11 +404,11 @@ footer{padding:26px 0;text-align:center;color:var(--muted);font-size:14px}
     </article>
 
     <article class="proj" data-c="data">
-      <div class="top"><span class="cat">Data science</span><span class="status done">Terminé</span></div>
-      <h3>Détection de plante parasite</h3>
-      <div class="ctx">Projet data science</div>
-      <p>Import et nettoyage de données CSV / Excel (anomalies, doublons, valeurs manquantes), analyse exploratoire et visualisations, puis modèle de régression logistique et évaluation.</p>
-      <div class="chips"><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Matplotlib</span><span class="chip">Régression logistique</span></div>
+      <div class="top"><span class="cat">Vision · Machine learning</span><span class="status done">Terminé</span></div>
+      <h3>Détection du striga par classification d'images</h3>
+      <div class="ctx">Projet data science · IA appliquée à l'agriculture</div>
+      <p>Modèle qui reconnaît sur une photo la présence de striga, une plante parasite qui ravage les cultures de céréales. Constitution d'un jeu de données de plusieurs centaines d'images (renommage, étiquetage, redimensionnement en 64×64), transformation en vecteurs normalisés, puis régression logistique codée de zéro en NumPy : sigmoïde, fonction de coût, propagation et descente de gradient. Comparaison de plusieurs taux d'apprentissage avec les courbes de coût, puis prédiction sur de nouvelles photos.</p>
+      <div class="chips"><span class="chip">Python</span><span class="chip">NumPy</span><span class="chip">Pillow</span><span class="chip">Matplotlib</span><span class="chip">Jupyter</span><span class="chip">Régression logistique</span><span class="chip">Descente de gradient</span></div>
     </article>
 
     <article class="proj" data-c="data dev">
