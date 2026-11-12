@@ -254,28 +254,13 @@ footer{padding:26px 0;text-align:center;color:var(--muted);font-size:14px}
       <div class="chips"><span class="chip">Python</span><span class="chip">NumPy</span><span class="chip">Pillow</span><span class="chip">Matplotlib</span><span class="chip">Jupyter</span><span class="chip">Régression logistique</span><span class="chip">Descente de gradient</span></div>
     </article>
 
-    <article class="proj" data-c="data dev">
-      <div class="top"><span class="cat">IA · Optimisation</span><span class="status done">Terminé</span></div>
-      <h3>Analyse comparative de l'algorithme Firefly</h3>
-      <div class="ctx">Projet IA</div>
-      <p>Traitement des résultats de plusieurs exécutions expérimentales, calcul de moyennes et d'écarts-types, comparaison des performances et rapports de résultats structurés.</p>
-      <div class="chips"><span class="chip">Python</span><span class="chip">C++</span><span class="chip">Statistiques</span><span class="chip">GitHub</span></div>
-    </article>
-
     <article class="proj" data-c="dev">
       <div class="top"><span class="cat">Réseau · C</span><span class="status done">Terminé</span></div>
       <h3>Détection de plagiat en client / serveur TCP</h3>
       <div class="ctx">Master MIAGE · Systèmes avancés</div>
-      <p>Un client envoie un document à un serveur via des sockets TCP ; le serveur le compare au document original avec la distance de Levenshtein et calcule un taux de similarité.</p>
-      <div class="chips"><span class="chip">C</span><span class="chip">Sockets TCP</span><span class="chip">Winsock</span><span class="chip">Levenshtein</span></div>
-    </article>
-
-    <article class="proj" data-c="dev">
-      <div class="top"><span class="cat">C++ · Simulation</span><span class="status done">Terminé</span></div>
-      <h3>Simulation de nuées (boids)</h3>
-      <div class="ctx">Master MIAGE · Systèmes avancés</div>
-      <p>Simulation du comportement collectif d'une nuée (séparation, alignement, cohésion) avec réglage des paramètres en temps réel par une interface graphique.</p>
-      <div class="chips"><span class="chip">C++</span><span class="chip">SFML</span><span class="chip">Dear ImGui</span></div>
+      <p>Application réseau en C composée de deux programmes, un client et un serveur, qui communiquent par sockets TCP. Le client se connecte au serveur et lui transmet un rapport sous forme de fichier. Le serveur, qui détient le document de référence, reçoit le texte, le compare à l'original avec la distance de Levenshtein (programmation dynamique), calcule un taux de similarité et signale un éventuel plagiat. Gestion complète du cycle de connexion : création de la socket, connexion, envoi et réception des données en flux, puis fermeture.</p>
+      <p>Extension sécurité : les échanges sont chiffrés avec TLS grâce à OpenSSL. Pour se protéger d'une attaque de l'homme du milieu, l'empreinte du certificat du serveur est transformée en identicon, une petite image générée de façon unique à partir de cette empreinte. Le client l'affiche à la connexion : si l'image ne correspond pas à celle attendue, le serveur n'est pas le bon et l'échange est interrompu.</p>
+      <div class="chips"><span class="chip">C</span><span class="chip">Sockets TCP</span><span class="chip">Client / serveur</span><span class="chip">Winsock</span><span class="chip">Levenshtein</span><span class="chip">Programmation dynamique</span><span class="chip">OpenSSL / TLS</span><span class="chip">Anti-MITM</span></div>
     </article>
 
     <article class="proj" data-c="si data">
