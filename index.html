@@ -26,6 +26,8 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .logo{font-family:"JetBrains Mono",monospace;font-weight:500;color:var(--ink);font-size:15px}
 .logo span{color:var(--accent-2)}
 .links{display:flex;gap:22px}
+.plinks{display:flex;gap:18px;margin-top:12px;font-size:14px;font-weight:600}
+.plinks a::after{content:" \2197"}
 .links a{color:var(--muted);font-size:14.5px;font-weight:500}
 .links a:hover{color:var(--accent);text-decoration:none}
 /* hero */
@@ -221,6 +223,15 @@ footer{padding:26px 0;text-align:center;color:var(--muted);font-size:14px}
     <button data-f="si">SI &amp; gestion de projet</button>
   </div>
   <div class="grid" id="grid">
+
+    <article class="proj" data-c="dev si">
+      <div class="top"><span class="cat">Web full stack</span><span class="status done">En ligne</span></div>
+      <h3>Tressia : réservation de tresseuses en Alsace</h3>
+      <div class="ctx">Projet personnel · Mulhouse, Colmar, Strasbourg</div>
+      <p>Plateforme qui met en relation des tresseuses indépendantes et leurs clientes. Recherche par coiffure, par ville ou par commune, réservation de créneaux réellement libres, chez la tresseuse ou à domicile avec zone et frais de déplacement. L'adresse de la tresseuse reste privée jusqu'à la réservation. Espace professionnel (agenda, coiffures, disponibilités) et administration. Double réservation impossible grâce à une contrainte en base, heure d'été gérée, 40 tests automatisés.</p>
+      <div class="chips"><span class="chip">Vue.js 3</span><span class="chip">TypeScript</span><span class="chip">Node.js (Hono)</span><span class="chip">PostgreSQL</span><span class="chip">Drizzle ORM</span><span class="chip">Vitest</span><span class="chip">Render</span></div>
+      <div class="plinks"><a href="https://tressia.onrender.com" target="_blank" rel="noopener">Voir le site</a><a href="https://github.com/rokhaya2712/tressia" target="_blank" rel="noopener">Code sur GitHub</a></div>
+    </article>
 
     <article class="proj" data-c="dev si">
       <div class="top"><span class="cat">C++ · Graphes</span><span class="status done">Terminé</span></div>
